@@ -1,0 +1,99 @@
+{
+  "colors": {
+    "night_navy":  "#022791",
+    "day_blue":    "#4D75FE",
+    "salmon":      "#FF8A69",
+    "yellow":      "#FAA944",
+    "black":       "#0C0C0C",
+    "gray":        "#262626",
+    "text":        "#3F3F3F",
+    "white":       "#FFFFFF",
+    "light_bg":    "#F7F8FC",
+    "light_blue":  "#E8EDFB",
+    "accent_green":"#3AD58E"
+  },
+  "color_roles": {
+    "primary":          "night_navy",
+    "primary_bright":   "day_blue",
+    "accent_warm_1":    "salmon",
+    "accent_warm_2":    "yellow",
+    "bg_default":       "white",
+    "bg_subtle":        "light_bg",
+    "text_heading":     "gray",
+    "text_body":        "text",
+    "footer_text":      "text"
+  },
+  "gradient": {
+    "hero": {"from": "night_navy", "to": "day_blue", "angle": 135},
+    "cta_button": {"from": "salmon", "to": "day_blue", "angle": 90}
+  },
+  "typography": {
+    "headline_font":    "Inter Tight",
+    "headline_weight":  "Bold",
+    "body_font":        "Inter Tight",
+    "body_weight":      "Regular",
+    "utility_font":     "Roboto",
+    "fallback":         "Arial"
+  },
+  "type_scale_pt": {
+    "hero":     90,
+    "h1":       44,
+    "h2":       32,
+    "h3":       24,
+    "h4":       18,
+    "body":     14,
+    "body_lg":  18,
+    "small":    11,
+    "caption":  10
+  },
+  "spacing_inches": {
+    "margin":      0.6,
+    "gutter":      0.35,
+    "section_pad": 0.5
+  },
+  "card_style": {
+    "radius_pt":       12,
+    "shadow_blur_emu":  152400,
+    "shadow_dist_emu":  38100,
+    "shadow_alpha_pct": 15
+  },
+  "button_style": {
+    "shape":       "pill",
+    "radius_pt":   20,
+    "fill_color":  "day_blue",
+    "text_color":  "white",
+    "font_size_pt": 13
+  },
+  "logo_rules": {
+    "min_size_px":          100,
+    "clearspace_unit":      "O_width",
+    "allowed_placements":   ["upper-left", "lower-left", "upper-center", "lower-center"],
+    "forbidden_placements": ["right-aligned"],
+    "dont_alter_colors":    true,
+    "dont_add_tagline":     true,
+    "dont_distort":         true
+  },
+  "logo_assets": {
+    "colored_horizontal_png": "assets/logos/logo-colored-horizontal.png",
+    "colored_vertical_png":   "assets/logos/logo-colored-vertical.png",
+    "white_horizontal_png":   "assets/logos/logo-white-horizontal.png",
+    "black_horizontal_png":   "assets/logos/logo-black-horizontal.png",
+    "favicon_colored_png":    "assets/logos/favicon-colored.png",
+    "favicon_white_png":      "assets/logos/favicon-white.png"
+  },
+  "website_cues": {
+    "hero_style":       "large headline left-aligned, illustration/image right, white or light gradient bg",
+    "card_elevation":   "shadow-based, no visible border",
+    "button_style":     "pill/fully-rounded, gradient or solid Day Blue, white text",
+    "icon_style":       "line icons, medium stroke, brand-colored",
+    "image_treatment":  "rounded corners ~16px, occasional blue tint overlays",
+    "section_padding":  "generous (96px web → 0.5in slides)",
+    "white_dominant":   true,
+    "accent_dots":      "decorative transparent circles in yellow/salmon/blue"
+  },
+  "slide_dimensions": {
+    "width_inches":  13.333,
+    "height_inches": 7.5,
+    "aspect":        "16:9"
+  }
+}

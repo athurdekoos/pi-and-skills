@@ -1,0 +1,15 @@
+{
+  "name": "@athurdekoos/pi-and-skills",
+  "version": "1.0.0",
+  "description": "Backup and restore for pi agent skills, prompts, settings, and registry",
+  "bin": {
+    "pi-restore": "./bin/restore.sh"
+  },
+  "scripts": {
+    "restore": "./bin/restore.sh",
+    "backup": "./bin/backup.sh"
+  },
+  "keywords": ["pi", "agent", "skills", "backup", "restore"],
+  "license": "UNLICENSED",
+  "private": false
+}
