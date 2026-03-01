@@ -1,0 +1,23 @@
+{
+  "skill_name": "repo-security-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Hey can you do a security audit on this repo? It's a Node.js Express API with a Postgres database. I haven't really thought about security much so I'm worried there might be issues.",
+      "expected_output": "A structured report covering all 8 domains with severity-rated findings, starting with recon to identify the stack and then running through secrets, dependencies, SAST, IaC, CI/CD, auth, API security, and data protection checks.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We just got a new Terraform repo from a contractor. Before we deploy it to AWS, can you check if there are any security problems? I'm especially worried about IAM permissions and S3 bucket configs.",
+      "expected_output": "A targeted IaC security review focusing on Terraform files, checking for overpermissioned IAM, public S3 buckets, unencrypted storage, open security groups, and exposed state files. Should also do a quick secrets scan on tfvars files.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Quick security check on our repo before we go live next week. We don't have time for a full audit but want to catch anything critical.",
+      "expected_output": "A quick scan hitting the highest-impact checks: secrets in code, critical CVEs in dependencies, obvious injection vulnerabilities, and any glaring misconfigurations. Should prioritize speed and focus on CRITICAL/HIGH findings only.",
+      "files": []
+    }
+  ]
+}

@@ -61,6 +61,15 @@ Gray areas depend on what's being built. Analyze the phase goal:
 
 Generate 3-4 **phase-specific** gray areas, not generic categories.
 
+**Engineering quality considerations:**
+When generating gray areas, also consider dimensions from quality skills:
+- **Architecture/Design** — Are there system design decisions to clarify? (ref: system-design skill)
+- **Testing strategy** — What testing approach fits this phase? (ref: testing-strategy skill)
+- **Documentation needs** — What docs should this phase produce? (ref: documentation skill)
+- **Tech debt risks** — Does this phase touch areas with known debt? (ref: tech-debt skill)
+
+These don't replace domain-specific gray areas — they supplement them when relevant.
+
 **Probing depth:**
 - Ask 4 questions per area before checking
 - "More questions about [area], or move to next?"

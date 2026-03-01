@@ -23,6 +23,12 @@ Quick mode is the same system with a shorter path:
 
 **Default:** Skips research, plan-checker, verifier. Use when you know exactly what to do.
 
+**Quality standards still apply even in quick mode:**
+- Self-review code for security, performance, and correctness before committing (ref: code-review skill)
+- Write appropriate tests — at minimum unit tests for new logic (ref: testing-strategy skill)
+- Update docs if changing public APIs or adding config (ref: documentation skill)
+- Note tech debt if taking shortcuts for speed (ref: tech-debt skill)
+
 **`--full` flag:** Enables plan-checking (max 2 iterations) and post-execution verification. Use when you want quality guarantees without full milestone ceremony.
 </objective>
 

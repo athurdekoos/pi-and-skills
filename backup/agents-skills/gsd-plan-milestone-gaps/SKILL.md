@@ -19,6 +19,14 @@ Create all phases necessary to close gaps identified by `/skill:gsd-audit-milest
 Reads MILESTONE-AUDIT.md, groups gaps into logical phases, creates phase entries in ROADMAP.md, and offers to plan each phase.
 
 One command creates all fix phases — no manual `/skill:gsd-add-phase` per gap.
+
+**Quality-driven gap categories:**
+Gaps may come from functional testing, but also from quality dimensions:
+- Security findings from code review (ref: code-review skill)
+- Testing coverage gaps (ref: testing-strategy skill)
+- Missing or stale documentation (ref: documentation skill)
+- Accumulated tech debt needing remediation (ref: tech-debt skill)
+- Architecture inconsistencies across phases (ref: system-design skill)
 </objective>
 
 <execution_context>

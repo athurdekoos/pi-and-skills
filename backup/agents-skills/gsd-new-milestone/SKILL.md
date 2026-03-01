@@ -18,6 +18,13 @@ Start a new milestone: questioning → research (optional) → requirements → 
 
 Brownfield equivalent of new-project. Project exists, PROJECT.md has history. Gathers "what's next", updates PROJECT.md, then runs requirements → roadmap cycle.
 
+**Quality dimensions carried forward:**
+- Review tech debt from previous milestone and plan remediation (ref: tech-debt skill)
+- Assess testing coverage gaps to address in new milestone (ref: testing-strategy skill)
+- Update documentation plan for new features (ref: documentation skill)
+- Validate architecture can support planned changes (ref: system-design skill)
+- Apply code review lessons learned from previous phases (ref: code-review skill)
+
 **Creates/Updates:**
 - `.planning/PROJECT.md` — updated with new milestone goals
 - `.planning/research/` — domain research (optional, NEW features only)

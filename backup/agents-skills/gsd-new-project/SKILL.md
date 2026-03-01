@@ -21,6 +21,13 @@ Pi coding agent mode:
 <objective>
 Initialize a new project through unified flow: questioning → research (optional) → requirements → roadmap.
 
+**Quality standards integrated from project start:**
+- System design principles guide architecture decisions during questioning (ref: system-design skill)
+- Testing strategy is considered when scoping requirements (ref: testing-strategy skill)
+- Documentation deliverables are planned alongside features (ref: documentation skill)
+- Tech debt awareness informs scope decisions (ref: tech-debt skill)
+- Security review criteria shape requirements (ref: code-review skill)
+
 **Creates:**
 - `.planning/PROJECT.md` — project context
 - `.planning/config.json` — workflow preferences

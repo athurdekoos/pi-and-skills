@@ -35,4 +35,10 @@ Phase: {{GSD_ARGS}}
 <process>
 Execute the add-tests workflow from @/home/mia/.agents/get-shit-done/workflows/add-tests.md end-to-end.
 Preserve all workflow gates (classification approval, test plan approval, RED-GREEN verification, gap reporting).
+
+When generating tests, apply quality skill guidance:
+- **Testing strategy**: Follow the testing pyramid — many unit tests, some integration, few E2E. Match test type to component type (ref: testing-strategy skill)
+- **Code review lens**: Tests should cover security boundaries, error handling, edge cases, and concurrency (ref: code-review skill)
+- **Documentation**: Include test documentation explaining what each test validates and why (ref: documentation skill)
+- **Tech debt coverage**: Prioritize tests for areas with known tech debt to prevent regressions (ref: tech-debt skill)
 </process>

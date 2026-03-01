@@ -28,7 +28,11 @@ For each task:
 1. Mark as in_progress
 2. Follow each step exactly (plan has bite-sized steps)
 3. Run verifications as specified
-4. Mark as completed
+4. Self-review: check for security issues, performance problems, edge cases, and maintainability (ref: code-review skill)
+5. Verify tests cover the right level — unit for logic, integration for APIs, E2E for user flows
+6. Update documentation if public APIs, config, or operational procedures changed
+7. Note any tech debt introduced as shortcuts or workarounds
+8. Mark as completed
 
 ### Step 3: Report
 When batch complete:
@@ -45,9 +49,9 @@ Based on feedback:
 ### Step 5: Complete Development
 
 After all tasks complete and verified:
-- Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use superpowers:finishing-a-development-branch
-- Follow that skill to verify tests, present options, execute choice
+- Run final tests across all modified code
+- Summarize all changes made
+- Present merge/PR options to user
 
 ## When to Stop and Ask for Help
 
@@ -78,7 +82,7 @@ After all tasks complete and verified:
 
 ## Integration
 
-**Required workflow skills:**
-- **superpowers:using-git-worktrees** - REQUIRED: Set up isolated workspace before starting
-- **superpowers:writing-plans** - Creates the plan this skill executes
-- **superpowers:finishing-a-development-branch** - Complete development after all tasks
+**Related skills:**
+- **writing-plans** — Creates the plan this skill executes
+- **code-review** — Code review dimensions used during self-review
+- **subagent-driven-development** — Alternative: same-session execution with subagents

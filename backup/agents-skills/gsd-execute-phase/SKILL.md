@@ -19,6 +19,13 @@ Execute all plans in a phase using wave-based parallel execution.
 Orchestrator stays lean: discover plans, analyze dependencies, group into waves, spawn subagents, collect results. Each subagent loads the full execute-plan context and handles its own plan.
 
 Context budget: ~15% orchestrator, 100% fresh per subagent.
+
+**Quality standards enforced during execution:**
+- Code self-review after each task for security, performance, correctness, maintainability (ref: code-review skill)
+- Tests written matching testing strategy — unit for logic, integration for APIs, E2E for flows (ref: testing-strategy skill)
+- Documentation updated when changing public APIs, config, or operations (ref: documentation skill)
+- Tech debt noted in SUMMARY.md if shortcuts taken (ref: tech-debt skill)
+- Implementation validated against architecture decisions (ref: system-design skill)
 </objective>
 
 <execution_context>

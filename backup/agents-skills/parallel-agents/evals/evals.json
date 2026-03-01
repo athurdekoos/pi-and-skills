@@ -1,0 +1,95 @@
+{
+  "skill_name": "parallel-agents",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run 3 worker agents in parallel. Agent 1 should write 'ALPHA' to /tmp/parallel-test-alpha.txt, Agent 2 should write 'BRAVO' to /tmp/parallel-test-bravo.txt, and Agent 3 should write 'CHARLIE' to /tmp/parallel-test-charlie.txt. Then verify all 3 files exist with correct content.",
+      "expected_output": "All 3 files created with correct content, confirming parallel execution works",
+      "assertions": [
+        {
+          "name": "all_three_tasks_completed",
+          "type": "file_exists",
+          "description": "All three output files were created by the parallel agents",
+          "check": "All of /tmp/parallel-test-alpha.txt, /tmp/parallel-test-bravo.txt, /tmp/parallel-test-charlie.txt exist"
+        },
+        {
+          "name": "correct_content_alpha",
+          "type": "file_content",
+          "description": "Agent 1 wrote the correct content",
+          "check": "/tmp/parallel-test-alpha.txt contains 'ALPHA'"
+        },
+        {
+          "name": "correct_content_bravo",
+          "type": "file_content",
+          "description": "Agent 2 wrote the correct content",
+          "check": "/tmp/parallel-test-bravo.txt contains 'BRAVO'"
+        },
+        {
+          "name": "correct_content_charlie",
+          "type": "file_content",
+          "description": "Agent 3 wrote the correct content",
+          "check": "/tmp/parallel-test-charlie.txt contains 'CHARLIE'"
+        },
+        {
+          "name": "no_interference",
+          "type": "content_check",
+          "description": "No cross-contamination between agent outputs",
+          "check": "Each file contains only its designated word, not content from other agents"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to gather information from the codebase fast. Use 2 scout agents in parallel: one to find all TypeScript files under ~/.pi/agent/extensions/ and another to find all markdown files under ~/.pi/agent/agents/. Report both results.",
+      "expected_output": "Both scouts return their findings concurrently - one lists .ts files, the other lists .md files",
+      "assertions": [
+        {
+          "name": "both_scouts_completed",
+          "type": "output_check",
+          "description": "Both parallel scout tasks completed successfully",
+          "check": "Output mentions results from both scouts (TypeScript files and markdown files)"
+        },
+        {
+          "name": "ts_files_found",
+          "type": "output_check",
+          "description": "Scout 1 found TypeScript files",
+          "check": "Output includes .ts file paths from the extensions directory"
+        },
+        {
+          "name": "md_files_found",
+          "type": "output_check",
+          "description": "Scout 2 found markdown files",
+          "check": "Output includes .md file paths from the agents directory"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Test parallel agent execution by running 4 workers simultaneously. Each should compute a different math result and write it to a file: Worker 1 writes '100' to /tmp/math-1.txt (50+50), Worker 2 writes '256' to /tmp/math-2.txt (2^8), Worker 3 writes '42' to /tmp/math-3.txt (the answer), Worker 4 writes '3.14' to /tmp/math-4.txt (approx pi). After all complete, read all 4 files and confirm the results.",
+      "expected_output": "All 4 workers complete in parallel, each file has the correct math result",
+      "assertions": [
+        {
+          "name": "all_four_completed",
+          "type": "file_exists",
+          "description": "All 4 math result files were created",
+          "check": "/tmp/math-1.txt through /tmp/math-4.txt all exist"
+        },
+        {
+          "name": "correct_math_results",
+          "type": "content_check",
+          "description": "Each file contains the expected math result",
+          "check": "math-1.txt has 100, math-2.txt has 256, math-3.txt has 42, math-4.txt has 3.14"
+        },
+        {
+          "name": "parallel_mode_used",
+          "type": "output_check",
+          "description": "The subagent tool was invoked in parallel mode (tasks array), not sequentially",
+          "check": "Subagent was called with tasks array parameter for concurrent execution"
+        }
+      ],
+      "files": []
+    }
+  ]
+}

@@ -15,13 +15,6 @@ if [[ "${1:-}" == "--dry-run" ]]; then
   echo "=== DRY RUN — no files will be modified ==="
 fi
 
-AGENTS_SKILLS="$HOME/.agents/skills"
-AGENTS_REGISTRY="$HOME/.agents/skill-registry.json"
-PI_SKILLS="$HOME/.pi/agent/skills"
-PI_PROMPTS="$HOME/.pi/agent/prompts"
-PI_SETTINGS="$HOME/.pi/agent/settings.json"
-PI_BIN="$HOME/.pi/agent/bin"
-
 restore_dir() {
   local src="$1" dst="$2" label="$3"
   if [[ ! -d "$src" ]]; then
@@ -54,16 +47,28 @@ echo "║   pi-and-skills restore                  ║"
 echo "╚══════════════════════════════════════════╝"
 echo ""
 
-restore_dir  "$BACKUP_DIR/agents-skills"      "$AGENTS_SKILLS"   "~/.agents/skills"
-restore_file "$BACKUP_DIR/skill-registry.json" "$AGENTS_REGISTRY" "skill-registry.json"
-restore_dir  "$BACKUP_DIR/pi-agent-skills"     "$PI_SKILLS"       "~/.pi/agent/skills"
-restore_dir  "$BACKUP_DIR/pi-agent-prompts"    "$PI_PROMPTS"      "~/.pi/agent/prompts"
-restore_file "$BACKUP_DIR/settings.json"       "$PI_SETTINGS"     "settings.json"
-restore_dir  "$BACKUP_DIR/pi-agent-bin"        "$PI_BIN"          "~/.pi/agent/bin"
+# Core skills
+restore_dir  "$BACKUP_DIR/agents-skills"      "$HOME/.agents/skills"              "~/.agents/skills"
+restore_file "$BACKUP_DIR/skill-registry.json" "$HOME/.agents/skill-registry.json" "skill-registry.json"
+
+# Pi agent config
+restore_dir  "$BACKUP_DIR/pi-agent-skills"     "$HOME/.pi/agent/skills"            "~/.pi/agent/skills"
+restore_dir  "$BACKUP_DIR/pi-agent-prompts"    "$HOME/.pi/agent/prompts"           "~/.pi/agent/prompts"
+restore_dir  "$BACKUP_DIR/pi-agent-agents"     "$HOME/.pi/agent/agents"            "~/.pi/agent/agents"
+restore_dir  "$BACKUP_DIR/pi-agent-bin"        "$HOME/.pi/agent/bin"               "~/.pi/agent/bin"
+restore_dir  "$BACKUP_DIR/pi-agent-extensions" "$HOME/.pi/agent/extensions"        "~/.pi/agent/extensions"
+restore_file "$BACKUP_DIR/settings.json"       "$HOME/.pi/agent/settings.json"     "settings.json"
+
+# User-level files
+restore_file "$BACKUP_DIR/user/TASKS.md"       "$HOME/TASKS.md"                    "~/TASKS.md"
+restore_file "$BACKUP_DIR/user/CLAUDE.md"      "$HOME/CLAUDE.md"                   "~/CLAUDE.md"
+restore_dir  "$BACKUP_DIR/user/memory"         "$HOME/memory"                      "~/memory"
 
 echo ""
 if [[ "$DRY_RUN" == true ]]; then
-  echo "✅ Dry run complete. Re-run without --dry-run to apply."
+  SKILL_COUNT=$(find "$BACKUP_DIR/agents-skills" -name "SKILL.md" 2>/dev/null | wc -l)
+  echo "✅ Dry run complete. Would restore $SKILL_COUNT skills."
+  echo "   Re-run without --dry-run to apply."
 else
   echo "✅ Restore complete!"
 fi

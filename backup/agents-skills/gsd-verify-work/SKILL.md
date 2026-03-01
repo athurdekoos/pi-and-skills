@@ -19,6 +19,14 @@ Validate built features through conversational testing with persistent state.
 Purpose: Confirm what Claude built actually works from user's perspective. One test at a time, plain text responses, no interrogation. When issues are found, automatically diagnose, plan fixes, and prepare for execution.
 
 Output: {phase_num}-UAT.md tracking all test results. If issues found: diagnosed gaps, verified fix plans ready for /skill:gsd-execute-phase
+
+**Quality verification includes:**
+- Functional correctness (primary UAT)
+- Code review standards met — security, performance, correctness, maintainability (ref: code-review skill)
+- Testing coverage appropriate — unit for logic, integration for APIs, E2E for flows (ref: testing-strategy skill)
+- Documentation updated where needed (ref: documentation skill)
+- Tech debt documented if introduced (ref: tech-debt skill)
+- Architecture alignment with design decisions (ref: system-design skill)
 </objective>
 
 <execution_context>

@@ -17,6 +17,13 @@ Pi coding agent mode:
 Verify milestone achieved its definition of done. Check requirements coverage, cross-phase integration, and end-to-end flows.
 
 **This command IS the orchestrator.** Reads existing VERIFICATION.md files (phases already verified during execute-phase), aggregates tech debt and deferred gaps, then spawns integration checker for cross-phase wiring.
+
+**Quality dimensions audited:**
+- Code review coverage across all phases (ref: code-review skill)
+- Testing strategy consistency and coverage gaps (ref: testing-strategy skill)
+- Documentation completeness — READMEs, API docs, runbooks (ref: documentation skill)
+- Tech debt inventory — accumulated debt classified and prioritized (ref: tech-debt skill)
+- Architecture consistency — system design patterns followed across phases (ref: system-design skill)
 </objective>
 
 <execution_context>

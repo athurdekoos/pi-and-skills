@@ -1,0 +1,43 @@
+{
+  "name": "Amelia Thurdekoos",
+  "handle": "athurdekoos",
+  "tagline": "Building tools that turn data into polished deliverables",
+  "socials": {
+    "github": {
+      "url": "https://github.com/athurdekoos",
+      "label": "GitHub",
+      "icon": "github"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/amelia-thurdekoos-26450b86/",
+      "label": "LinkedIn",
+      "icon": "linkedin"
+    },
+    "discord": {
+      "url": "https://discord.gg/YmsT7FFnW8",
+      "label": "Discord",
+      "icon": "discord"
+    }
+  },
+  "brand": {
+    "night_navy": "#022791",
+    "day_blue": "#4D75FE",
+    "salmon": "#FF8A69",
+    "yellow": "#FAA944",
+    "accent_green": "#3AD58E"
+  },
+  "projects": [
+    {
+      "name": "OpenTeams PPTX Generator",
+      "description": "AI-powered slide deck generator that produces brand-compliant PowerPoint presentations from natural language. 11 slide types, full brand enforcement, works with pi and Claude Code.",
+      "repo": "https://github.com/athurdekoos/ppt",
+      "tags": ["python", "python-pptx", "AI", "brand-automation", "agent-skills"],
+      "highlights": [
+        "11 slide types: cover, agenda, metrics, case study, and more",
+        "Enforces OpenTeams 2025 Brand Guidelines automatically",
+        "Natural language → polished .pptx in seconds",
+        "Installable as a pi or Claude Code agent skill"
+      ]
+    }
+  ]
+}

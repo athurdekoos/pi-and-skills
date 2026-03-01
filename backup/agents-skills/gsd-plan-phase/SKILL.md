@@ -18,6 +18,13 @@ Create executable phase prompts (PLAN.md files) for a roadmap phase with integra
 
 **Default flow:** Research (if needed) → Plan → Verify → Done
 
+**Quality standards woven into plans:**
+- Plans include code review steps after implementation (ref: code-review skill)
+- Testing strategy specified per component — unit/integration/E2E (ref: testing-strategy skill)
+- Documentation deliverables listed when APIs, config, or operations change (ref: documentation skill)
+- Tech debt implications noted for shortcuts or workarounds (ref: tech-debt skill)
+- Architecture decisions validated against system design principles (ref: system-design skill)
+
 **Orchestrator role:** Parse arguments, validate phase, research domain (unless skipped), spawn gsd-planner, verify with gsd-plan-checker, iterate until pass or max iterations, present results.
 </objective>
 
